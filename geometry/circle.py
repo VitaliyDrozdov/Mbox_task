@@ -1,13 +1,12 @@
 import math
+from .shape import Shape
 
 
-def circle_area(radius):
-    """Вычисление площади круга по радиусу.
-    Args:
-        radius (float): радиус круга.
-    Return:
-        float: площадь круга.
-    """
-    if radius < 0:
-        raise ValueError("Радиус не может быть отрицательным")
-    return math.pi * radius**2
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        if self.radius < 0:
+            raise ValueError("Радиус не может быть отрицательным")
+        return round(math.pi * self.radius**2, 3)

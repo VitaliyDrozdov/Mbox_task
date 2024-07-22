@@ -1,4 +1,5 @@
-from .circle import circle_area
-from .triangle import triangle_area
+from .circle import Circle
+from .triangle import Triangle
+from .shape import Shape
 
-__all__ = ["circle_area", "triangle_area"]
+__all__ = ["Circle", "Triangle", "Shape"]
